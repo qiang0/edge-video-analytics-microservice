@@ -22,10 +22,12 @@
 # SOFTWARE.
 
 
-
 if [[ ${RUN_MODE} != "EVA" ]]; then
   python3 -m evas
 else
-  python3 -m server
+  python3 -m server &
+  python3 default.py &
 fi
+
+wait
 

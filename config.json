@@ -1,0 +1,24 @@
+{
+    "configs": [
+        {
+            "pipeline": "object_detection",
+            "pipeline_version": "person_vehicle_bike",
+            "payload": {
+                "source": {
+                    "uri": "file:///home/pipeline-server/resources/classroom.mp4",
+                    "type": "uri"
+                },
+                "destination": {
+                    "metadata": {
+                        "type": "file",
+                        "path": "/tmp/results.jsonl",
+                        "format": "json-lines"
+                    }
+                },
+                "parameters": {
+                    "threshold": 0.80
+                }
+            }
+        }
+    ]
+}

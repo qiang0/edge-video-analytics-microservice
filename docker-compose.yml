@@ -61,6 +61,7 @@ services:
       - "./pipelines/:/home/pipeline-server/pipelines/"
       - "./models:/home/pipeline-server/models/"
       - "./resources:/home/pipeline-server/resources/"
+      - "./config.json:/home/pipeline-server/config.json"
     device_cgroup_rules:
     # Default run - device-cgroup-rule='c 189:* rmw'
     # NCS2 run - device-cgroup-rule='c 209:* rmw'

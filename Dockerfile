@@ -49,6 +49,7 @@ RUN apt-get update && apt-get install -y libcjson-dev
 
 COPY ./run.sh /home/pipeline-server
 COPY ./evas/ /home/pipeline-server/evas
+COPY ./default.py /home/pipeline-server/default.py
 RUN chmod a+x run.sh
 COPY --from=builder /home/pipeline-server/eii-core/common/util/*.py util/
 

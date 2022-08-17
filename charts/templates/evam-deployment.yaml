@@ -29,6 +29,10 @@ spec:
           value: "8554"
         - name:  RUN_MODE
           value: "EVA"
+        - name: ENABLE_WEBRTC
+          value: "{{ .Values.evamImage.enableWEBRTC }}"
+        - name: WEBRTC_SIGNALING_SERVER
+          value: "{{ .Values.evamImage.signallingserverWEBRTC }}"
         ports:
         - containerPort: 8080
           name: api-port
@@ -36,11 +40,11 @@ spec:
           name: rtsp-port
         volumeMounts:
         - name: evam-models
-          mountPath: /app/models
+          mountPath: /home/pipeline-server/models
         - name: evam-pipelines
-          mountPath: /app/pipelines
+          mountPath: /home/pipeline-server/pipelines
         - name: evam-resources
-          mountPath: /app/resources
+          mountPath: /home/pipeline-server/resources
       volumes:
         - name: evam-models
           hostPath:

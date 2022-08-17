@@ -12,6 +12,9 @@ evamImage:
   # Path to models and piplelines folder, needed for evam image
   filePath: /opt/intel/evam/
   enableRTSP: "true"
+  signallingserverWEBRTC: ws://<HOST-IP>:30006
+  enableWEBRTC: true
+
 
 mosquittoImage:
   repository: eclipse-mosquitto
@@ -46,7 +49,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 80
 
 ingress:

@@ -11,6 +11,7 @@ spec:
   - name: api-port
     port: 8080
     targetPort: 8080
+    nodePort: 30007
   - name: rtsp-port
     port: 8554
     targetPort: 8554
