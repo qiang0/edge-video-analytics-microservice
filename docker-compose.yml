@@ -25,7 +25,7 @@ services:
   broker:
     image: eclipse-mosquitto
     hostname: mqtt
-    container_name: mqtt_broker
+    container_name: mqtt-broker
     volumes:
       - ./mosquitto:/mosquitto/config
     ports:
@@ -35,8 +35,8 @@ services:
 
   edge_video_analytics_microservice:
     image: intel/edge_video_analytics_microservice:0.7.2
-    hostname: edge_video_analytics_microservice
-    container_name: edge_video_analytics_microservice
+    hostname: edge-video-analytics-microservice
+    container_name: edge-video-analytics-microservice
     privileged: true
     tty: true
     entrypoint: ["./run.sh"]
