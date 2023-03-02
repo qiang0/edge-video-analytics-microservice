@@ -20,7 +20,7 @@
 # SOFTWARE.
 
 
-version: "3"
+version: "2.4"
 services:
   broker:
     image: eclipse-mosquitto
